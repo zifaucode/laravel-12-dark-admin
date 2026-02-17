@@ -11,7 +11,7 @@
             <button class="btn btn-link text-decoration-none text-dark p-0 d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="user-avatar me-2">
                     @if(Auth::user()->photo)
-                    <img src="{{ asset('photo-user/' . Auth::user()->photo) }}" alt="Avatar" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
+                    <img src="{{ asset('photo-user/' . (Auth::user()->photo ?? 'avatar.png')) }}" alt="Avatar" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
                     @else
                     <i class="bi bi-person-fill"></i>
                     @endif

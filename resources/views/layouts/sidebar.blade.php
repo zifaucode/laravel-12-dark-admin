@@ -4,7 +4,7 @@ $setting = Setting::first();
 @endphp
 <aside class="sidebar">
     <div class="sidebar-brand">
-        <img src="{{ asset('img-web/' . $setting->logo ?? 'logo.png') }}" alt="Logo" class="img-fluid" style="width: 50px; height: 50px;">
+        <img src="{{ asset('img-web/' . ($setting->logo ?? 'logo.png')) }}" alt="Logo" class="img-fluid" style="width: 50px; height: 50px;">
         <span>{{ config('app.name', 'Admin Panel') }}</span>
     </div>
 

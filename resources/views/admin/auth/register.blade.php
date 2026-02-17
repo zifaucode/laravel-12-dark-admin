@@ -14,7 +14,7 @@ $setting = Setting::first();
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Register - {{ $setting->title }}</title>
-    <link rel="icon" href="{{ asset('img-web/' . $setting->favicon) }}">
+    <link rel="icon" href="{{ asset('img-web/' . ($setting->favicon ?? 'favicon.png')) }}">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -623,7 +623,7 @@ $setting = Setting::first();
         <!-- Left Section: Illustration -->
         <div class="illustration-section">
             <div class="illustration-container">
-                <img src="{{ asset('img-web/' . $setting->logo) }}" alt="Logo" width="200">
+                <img src="{{ asset('img-web/' . ($setting->logo ?? 'logo.png')) }}" alt="Logo" width="200">
             </div>
         </div>
 
@@ -631,7 +631,7 @@ $setting = Setting::first();
         <div class="form-section">
             <div class="login-container">
                 <div class="login-header">
-                    <h2>REGISTER {{ $setting->title }}</h2>
+                    <h2>REGISTER {{ $setting->title ?? 'Admin' }}</h2>
                 </div>
 
                 @if(session('error'))
